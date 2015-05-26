@@ -5,6 +5,8 @@
     using System.IO;
     using System.Threading;
 
+    using RaspberryPi.DotNet;
+
     public class Program
     {
         public void Main(string[] args)
@@ -23,6 +25,8 @@
             }
 
             Thread.Sleep(300);
+
+            GPIOFile fp = new GPIOFile(GPIOPins.GPIO_00);
         }
     }
 }
